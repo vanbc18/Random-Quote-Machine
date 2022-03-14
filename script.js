@@ -40,7 +40,7 @@ const GetRandomQuote = () => {
 
 
     React.createElement("h2", { id: "author" }, "- ", author, "."), /*#__PURE__*/
-    React.createElement("div", { className: "row btn btn-group btn-group-justified" }, /*#__PURE__*/
+    React.createElement("div", { className: "row btn-group btn-group-justified" }, /*#__PURE__*/
     React.createElement("div", { className: "col-xs-6" }, /*#__PURE__*/
     React.createElement("a", { href: "https://twitter.com/intent/tweet", target: "_blank", id: "tweet-quote" }, /*#__PURE__*/
     React.createElement("button", { id: "icon", className: "btn" }, "TWEET THIS QUOTE\u2002", /*#__PURE__*/
