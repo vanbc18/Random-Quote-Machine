@@ -1,0 +1,43 @@
+#quote-box {
+  min-width: 25rem;
+  min-height: 25rem;
+  margin-top: 2rem;
+  padding: 0 2em;
+  background: rgba(255, 165, 0, 0.15);
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#text { 
+  height: 10rem; 
+  color: #320F0C;
+  display: inline-flex;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 0.05em;
+}
+
+#author {
+  font-style: italic;
+  font-family: 'Ephesis', cursive;
+}
+
+#new-quote {
+  color: white;
+  font-weight: bold;
+  background: #E04436;
+  padding: 1rem 7rem;
+}
+
+#tweet-quote {
+}
+
+#icon {
+  font-weight: bold;
+  color: white;
+  background: #E04436;
+  padding: 1rem 3rem;
+}
+
+#footer {
+  font-family: 'Covered By Your Grace', cursive;
+}

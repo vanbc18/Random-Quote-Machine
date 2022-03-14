@@ -1,0 +1,63 @@
+const QUOTES = [
+  { quote: "Be yourself everyone else is already taken.",
+    author: "Oscar Wilde" },
+  { quote: "Regret is fo suckas, fo suckas, fo suckas. Regret is fo suckas, b*tch",
+    author: "Ludacris"},
+  { quote: "It takes courage to grow up and turn out to be who you really are.",
+    author: "E.E. Cummings"},
+  { quote: "A day without sunshine is like, you know, night.",
+    author: "Steve Martin" },
+  { quote :"I think anything is possible if you have the mindset and the will and desire to do it and put the time in.",
+    author: "Roger Clemens" },
+  { quote: "We accept the love we think we deserve.",
+    author: "Stephen Chbosky"},
+  { quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    author: "Albert Einstein"},
+  { quote: "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+    author: "Bernard M. Baruch"},
+  { quote: "You only live once, but if you do it right, once is enough..",
+    author: "Mae West"}
+];
+
+const GetRandomQuote = () => {
+  const [quote, setQuote] = React.useState(QUOTES[0].quote);
+  const [author, setAuthor] = React.useState(QUOTES[0].author)
+  const [currentIdx, setCurrentIdx] = React.useState("");
+  
+  const nextQuote = () => {
+    const randomIdx = Math.floor(Math.random() * QUOTES.length);
+    setCurrentIdx(randomIdx);
+    if (currentIdx !== randomIdx) {
+    setQuote(QUOTES[randomIdx].quote);
+    setAuthor(QUOTES[randomIdx].author);
+    };
+  }
+
+    return (
+      <div className="container text-center" id="quote-box">  
+        <div className="row">
+            <h1 id="text">"{quote}"</h1>
+        </div>
+        
+        <h2 id="author">- {author}.</h2>   
+        <div className="row btn btn-group btn-group-justified">
+          <div className="col-xs-6">
+            <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote">
+            <button id="icon" className="btn">TWEET THIS QUOTE                
+                  <i className="fa fa-twitter"></i>
+              </button>
+            </a>
+          </div>
+          
+            <div className="col-xs-6">
+              <button id="new-quote" className="btn" onClick={nextQuote}>
+                NEW QUOTE
+              </button>
+            </div>
+        </div>
+        <footer id="footer" class="text-center">&copy; 2021 Van B-C.</footer>
+    </div>
+    );
+};
+
+ReactDOM.render(<GetRandomQuote />, document.getElementById("App"));
